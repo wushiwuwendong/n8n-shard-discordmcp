@@ -1,0 +1,17 @@
+{
+  "id": "P6HFaE2hihsdStF4",
+  "name": "Feishu account",
+  "type": "feishuOauth2Api",
+  "data": {
+    "clientId": "",
+    "clientSecret": "",
+    "csrfSecret": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "VIq4aX4RgPiKBaBb",
+    "projectName": "Wu Peter <244285380@qq.com>",
+    "personalEmail": "244285380@qq.com"
+  },
+  "isGlobal": false
+}

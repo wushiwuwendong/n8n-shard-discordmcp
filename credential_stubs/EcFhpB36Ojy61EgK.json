@@ -1,0 +1,20 @@
+{
+  "id": "EcFhpB36Ojy61EgK",
+  "name": "Feishu account 2",
+  "type": "feishuCredentialsApi",
+  "data": {
+    "baseUrl": "",
+    "appid": "",
+    "appsecret": "",
+    "accessToken": "",
+    "allowedHttpRequestDomains": "",
+    "allowedDomains": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "VIq4aX4RgPiKBaBb",
+    "projectName": "Wu Peter <244285380@qq.com>",
+    "personalEmail": "244285380@qq.com"
+  },
+  "isGlobal": false
+}

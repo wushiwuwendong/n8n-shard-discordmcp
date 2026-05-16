@@ -1,0 +1,118 @@
+{
+  "id": "UTuxFuGgi7jlouP_QF01n",
+  "name": "auto",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "availableInChat": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -336,
+        -32
+      ],
+      "id": "ed2c5f98-01ae-4b28-8068-12bd5f3a22b5",
+      "name": "When chat message received",
+      "webhookId": "96cd6c9b-dd6b-4790-a0a0-8473717562cc"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -128,
+        -32
+      ],
+      "id": "e1562825-2261-4f5a-bf54-6498f54d4649",
+      "name": "AI Agent",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "endpointUrl": "http://dongcloud.cc:18765/mcp",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        208
+      ],
+      "id": "444c2afa-3b8a-4bcb-8ce0-96f7c3b01f7f",
+      "name": "MCP Client"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+      "typeVersion": 1,
+      "position": [
+        -272,
+        176
+      ],
+      "id": "96315197-213a-4067-b97d-4ea66240e55e",
+      "name": "DeepSeek Chat Model",
+      "credentials": {
+        "deepSeekApi": {
+          "id": "VtmkX9SBhiB7HOco",
+          "name": "DeepSeek account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepSeek Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "triggerCount": 1,
+  "versionId": "8bebf0b8-cfd7-4a5f-9b35-05336f9bcfcb",
+  "owner": {
+    "type": "personal",
+    "projectId": "VIq4aX4RgPiKBaBb",
+    "projectName": "Wu Peter <244285380@qq.com>",
+    "personalEmail": "244285380@qq.com"
+  },
+  "parentFolderId": null,
+  "isArchived": false
+}

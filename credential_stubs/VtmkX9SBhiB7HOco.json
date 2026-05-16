@@ -1,0 +1,15 @@
+{
+  "id": "VtmkX9SBhiB7HOco",
+  "name": "DeepSeek account",
+  "type": "deepSeekApi",
+  "data": {
+    "apiKey": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "VIq4aX4RgPiKBaBb",
+    "projectName": "Wu Peter <244285380@qq.com>",
+    "personalEmail": "244285380@qq.com"
+  },
+  "isGlobal": false
+}
